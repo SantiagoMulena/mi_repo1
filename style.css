@@ -1,7 +1,7 @@
 body{
 	margin: 0;
 	
-	background-image: url(fotos/fondo.jpg) ;
+	background-color: whitesmoke ;
 	font-family:sans-serif ;
 	background-attachment: fixed;
 	background-position: center center;
@@ -10,7 +10,98 @@ body{
 
 }
 
+video{
 
+position: fixed;
+min-width: 100%;
+min-height: 100%;
+top: 50%;
+left: 50%;
+
+transform: translateX(-50%) translateY(-50%) ;
+
+z-index: -1;
+
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container-fluid{
+
+}
+.navbar-brand{
+	font-size: 1.7em;
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+
+}
+
+.nav-link{
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+	font-size: 1.2em;
+}
 /*
 header{
 	display: flex;
@@ -41,6 +132,7 @@ animation-name:borde;
 animation-duration:2s;
 }
 h2{text-align: center;
+
 		
 }
 
@@ -50,6 +142,7 @@ footer{
 h3{
 	font-size: 1.5em;
 	text-align: center;
+
 	}
 
 p{
@@ -91,7 +184,8 @@ p{
 }
 
 .pie{
-	border: 5px solid coral;
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
 	border-radius: 10px;
 	margin: 5px;
 	padding: 0px;
@@ -324,19 +418,20 @@ p{
 
 
 
-@media (max-width:650px){
-	.gridp{
-		display: inline-block;
 
-	}
+/* css en contacto*/
+
+@media (max-width:650px){
 	iframe{
 		width: 100%;
 	}
 }
+@media (max-width:1200px){
+	iframe{
+		width: 50%;
+	}
+}
 
-*/
-
-/* css en contacto*/
 
 .consul{padding-top: 70px}
 
@@ -352,6 +447,7 @@ form{
 	border-radius:10px;
 	margin:auto;
 	background-color: #FAE5D3;
+
 
 }
 
@@ -405,11 +501,14 @@ legend{text-align: center;}
 /*  css en publicaciones-redes*/
 
 .iframe{
+
 		border-radius: 10px;
 		border-style:solid ;
 		border-color: #FAE5D3;
 		border-width: 5px;
 		min-width: 300px;
+		-webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .bordeif{
@@ -417,6 +516,7 @@ legend{text-align: center;}
 }
 
 .RedSoc{
+	text-decoration: black;
 	border-style: solid ;
 	border-color: #FAE5D3;
 	border-radius:10px;
@@ -424,4 +524,6 @@ legend{text-align: center;}
 	padding: 10px;
 	background-color: #FAE5D3;
 	text-decoration: none;	
+	-webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
