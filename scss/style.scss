@@ -206,12 +206,12 @@ h1{margin: 10px;
     margin: auto;
     background-color: #FAE5D3;
     
-    label{
+    form label{
       width: 72px;
       font-weight: bold;
       display: inline-block;
     }
-    input[type="text"] {
+    form input[type="text"] {
       width: 180px;
       padding: 3px 10px;
       border: 1px solid #f6f6f6;
@@ -221,7 +221,7 @@ h1{margin: 10px;
       display: inline-block;
     }
 
-    input[type="email"] {
+    form input[type="email"] {
       width: 180px;
       padding: 3px 10px;
       border: 1px solid #f6f6f6;
@@ -240,7 +240,7 @@ h1{margin: 10px;
       resize: none;
       display: block;
     }
-    input[type="submit"]:hover {
+    form input[type="submit"]:hover {
       cursor: pointer;
     }
     legend {
