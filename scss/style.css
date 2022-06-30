@@ -149,16 +149,6 @@ footer {
   text-align: right;
 }
 
-h3 {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-p {
-  font-size: 1.5em;
-  text-align: center;
-}
-
 .prod1 {
   text-align: center;
 }
@@ -301,7 +291,7 @@ form form input[type="email"] {
   padding: 3px 10px;
   border: 1px solid #f6f6f6;
   border-radius: 3px;
-  margin: 10px  0;
+  margin: 10px 0;
   display: inline-block;
 }
 
@@ -349,5 +339,15 @@ form legend {
   text-decoration: none;
   -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   animation: shadow-pop-br 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+h3 {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

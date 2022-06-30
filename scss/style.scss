@@ -10,6 +10,8 @@ body{
 
 }
 
+
+
 @keyframes heartbeat {
     from {
       -webkit-transform: scale(1);
@@ -72,17 +74,25 @@ body{
     }
   }
 
+
+
+  
+  @mixin animaciones-nav {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  
+}
+
+
   .navbar-brand{
 	font-size: 1.7em;
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+@include animaciones-nav()
 
 
 }
 
 .nav-link{
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	@include animaciones-nav()
 
 	font-size: 1.2em;
 }
@@ -100,21 +110,13 @@ h1{margin: 10px;
     footer{
         text-align: right;	
     }
-    h3{
-        font-size: $textoheader;
-        text-align: center;
     
-        }
-    
-    p{
-        font-size: $textoheader;
-        text-align: center;
+    @mixin animacion-contac {
+      -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+      
     }
-    
-    
-    
-    
-    
+
     .prod1{text-align: center;}
     .prod{
         
@@ -123,8 +125,7 @@ h1{margin: 10px;
         margin: 10px;
         padding: 0px;
         display: inline-grid;
-        -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-        animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+       @include animacion-contac()
     }
     
     .pie{
@@ -145,8 +146,7 @@ h1{margin: 10px;
         margin: 10px;
         padding: 0px;
         display: inline-block;
-    -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-        animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;}
+        @include animacion-contac()}
     
         @keyframes borde{
             0%{text-shadow: 0 25px 50px rgba(119, 94, 94, 0.5);
@@ -192,9 +192,22 @@ h1{margin: 10px;
 
 *{box-sizing:border-box;}
 
+
+
+
 /*CONTACTO*/
 
- 
+@mixin contacto {
+  
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  margin: 10px 0;
+  display: inline-block;
+} 
+
+
+
+
   form{
     font-size: 1em;
     font-family: 'Josefin Sans', sans-serif;
@@ -214,21 +227,14 @@ h1{margin: 10px;
     form input[type="text"] {
       width: 180px;
       padding: 3px 10px;
-      border: 1px solid #f6f6f6;
-      border-radius: 3px;
+      @include contacto()
       
-      margin: 10px 0;
-      display: inline-block;
     }
 
     form input[type="email"] {
       width: 180px;
       padding: 3px 10px;
-      border: 1px solid #f6f6f6;
-      border-radius: 3px;
-     
-      margin: 10px  0;
-      display: inline-block;
+      @include contacto()
     }
     textarea {
       width: 100%;
@@ -260,8 +266,7 @@ h1{margin: 10px;
   border-color: #FAE5D3;
   border-width: 5px;
   min-width: 300px;
-  -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  @include animacion-contac()
 
 }
 }
@@ -277,6 +282,28 @@ animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 	padding: 10px;
 	background-color: #FAE5D3;
 	text-decoration: none;	
-	-webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  @include animacion-contac()
 }
+
+$letras: ( 
+h3: 1.3em,
+p:1.1em,
+
+
+);
+
+$h3: map-get($letras, h3 );
+$p: map-get($letras, p);
+
+h3{
+  font-size:$h3;
+  text-align: center;
+
+}
+
+p{
+  font-size: $p;
+  text-align: center;
+}
+
+
