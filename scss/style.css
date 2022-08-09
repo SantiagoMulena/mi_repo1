@@ -37,6 +37,7 @@ h3 {
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
+/* footer y colorpage*/
 .pie {
   padding-left: 10px;
   margin-left: 10px;
@@ -46,6 +47,7 @@ h3 {
   background-color: #dbdbd0;
 }
 
+/*  Animaciones */
 .tracking-in-contract {
   -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
@@ -150,6 +152,7 @@ h3 {
   }
 }
 
+/*  img index */
 .intru {
   background-color: #d5bdaf;
   display: inline-block;
@@ -260,6 +263,7 @@ p {
   }
 }
 
+/* Contacto */
 form {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
@@ -341,6 +345,7 @@ form legend {
   animation: shadow-pop-br 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
+/* Responsive*/
 @media (max-width: 650px) {
   p {
     font-size: 1em;
@@ -359,16 +364,28 @@ form legend {
   }
 }
 
-.cards {
-  text-align: center;
+/*     Productos   */
+.flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-justify-comtent: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards {
+  text-align: center;
   padding: 10px;
 }
 
